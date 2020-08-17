@@ -1,0 +1,1 @@
+Application to generate an API call to openweathermap.org and update the UI with information given by an user.
