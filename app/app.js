@@ -1,6 +1,6 @@
 // Web API and URL
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=3b3e88109bef8fb5d11b3cbf5f2f5be2';
+const apiKey = '&appid=3b3e88109bef8fb5d11b3cbf5f2f5be2&units=imperial';
 
 // Todays date
 let d = new Date();
@@ -30,7 +30,7 @@ function performAction(e) {
 
 // getWeather function
 const getWeather = async (baseURL, zipCode, apiKey) => {
-    const res = await fetch(baseURL + zipCode + apiKey + "&units=metric");
+    const res = await fetch(baseURL + zipCode + apiKey);
 
     try {
         const data = await res.json();
